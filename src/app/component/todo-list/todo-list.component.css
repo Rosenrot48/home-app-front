@@ -1,0 +1,17 @@
+/*.example-container {*/
+/*  width: 350px;*/
+/*  margin-left: 50%;*/
+/*}*/
+.mat-card {
+  border-radius: 5px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  width: 40%;
+  background-color: #d3d3d3;
+  /*width: 800px;*/
+  /*max-width: 25em;*/
+  float: left;
+  position: relative;
+}

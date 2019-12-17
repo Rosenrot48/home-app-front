@@ -1,0 +1,23 @@
+<app-navbar [navTitle]="'Мой список задач'"></app-navbar>
+
+<!--<div *ngFor="let tod of this.todoList" class="mat-elevation-z8 example-container">-->
+<button mat-raised-button style="margin-left: 2%; margin-top: 1%; color: black; background-color: coral"  (click)="this.workWithTODO()"><mat-icon>add</mat-icon> Создать задачу</button>
+<button mat-raised-button style="margin-left: 2%; margin-top: 1%; color: black; background-color: coral"  (click)="this.saveLS()"><mat-icon>save</mat-icon> Сохранить список</button>
+<button mat-raised-button style="margin-left: 2%; margin-top: 1%; color: black; background-color: coral"  (click)="this.deleteLS()"><mat-icon>delete</mat-icon> Удалить список</button>
+
+<div *ngFor="let todo of this.todoList">
+
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{todo.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{todo.data}}
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button color="primary" (click)="this.deleteTODO(todo)"><mat-icon>delete</mat-icon></button>
+      <button mat-icon-button color="primary" (click)="this.workWithTODO(todo)"><mat-icon>create</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+<!--  <br>-->
+</div>

@@ -1,0 +1,26 @@
+<mat-card [formGroup]="this.todoForm">
+  <mat-card-header>
+    <mat-card-title>
+      Новая задача
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>Укажите заголовок задачи</mat-label>
+      <input matInput type="text" formControlName="title">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width-field">
+      <mat-label>Укажите задачу</mat-label>
+      <textarea matInput type="text" formControlName="data"> </textarea>
+    </mat-form-field>
+    <section class="checkbox-section">
+      <mat-checkbox formControlName="hasHighPriority" color="warn"
+                    class="h-margin">Является ли данная задача важной</mat-checkbox>
+    </section>
+    <br>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button matTooltip="Отмена" color="primary" (click)="this.closeDialog()"><mat-icon>cancel</mat-icon></button>
+    <button mat-icon-button matTooltip="Создать" color="primary" (click)="this.createTODO()"><mat-icon>done</mat-icon></button>
+  </mat-card-actions>
+</mat-card>
